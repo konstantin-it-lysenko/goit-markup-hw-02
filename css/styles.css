@@ -4,6 +4,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
+  letter-spacing: 0.02em;
   color: var(--primaryColor);
   background-color: var(--background);
 }
@@ -31,6 +32,8 @@ body {
   --footerContent: #f4f4fd;
   /* active/hover */
   --activeLink: #404bbf;
+  --activeBtn: #ffffff;
+  --activeBtnBackground: #404bbf;
 }
 
 .header {
@@ -137,7 +140,7 @@ body {
   padding: 16px 32px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-style: 16px;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   background: var(--mainBtnOrder);
@@ -150,7 +153,7 @@ body {
 
 .main-btn:hover,
 .main-btn:focus {
-  background: var(--activeLink);
+  background: var(--activeBtnBackground);
 }
 
 .advantages {
@@ -249,10 +252,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* .team__item-title {
-
-} */
-
 .footer {
   padding: 100px 0;
   background-color: var(--footerBackground);
@@ -300,6 +299,12 @@ body {
   cursor: pointer;
 }
 
+.portfolio__sort-btn:hover,
+.portfolio__sort-btn:focus {
+  color: var(--activeBtn);
+  background-color: var(--activeBtnBackground);
+}
+
 .active {
   color: var(--whiteText);
   background: var(--portfolioButtonActive);
@@ -330,4 +335,9 @@ body {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+}
+
+.portfolio__item-text {
+  letter-spacing: 0.02em;
+  color: var(--primaryColor);
 }
