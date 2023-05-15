@@ -5,41 +5,36 @@ body {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.02em;
-  box-sizing: border-box;
-  color: #2e2f42;
+  color: var(--primaryColor);
 }
 
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
-
-.container {
-  max-width: 1158px;
-  margin: 0 auto;
+:root {
+  /* main colors */
+  --primaryColor: #434455;
+  --headingsColor: #2e2f42;
+  /* logo */
+  --logoFirst: #4d5ae5;
+  --logoLast: #2e2f42;
+  /* other */
+  --border: #e7e9fc;
+  --mainBackground: #2e2f42;
+  --mainBtnOrder: #4D5AE5;
+  --background: #ffffff;
+  --whiteText: #ffffff;
+  /* portfolio */
+  --portfolioButton: #F4F4FD;
+  --portfolioButtonActive: #404BBF;
+  --portfolioBtnText: #4D5AE5;
+  /* footer */
+  --logoFooter: #f4f4fd;
+  --footerBackground: #2E2F42;
+  --footerContent: #f4f4fd;
+  /* active/hover */
+  --activeLink: #404BBF;
 }
 
 .header {
-  border-bottom: 1px solid #e7e9fc;
+  border-bottom: 1px solid var(--border);
 }
 
 .header__wrapper {
@@ -60,37 +55,58 @@ button {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.03em;
+  color: var(--headingsColor);
   text-transform: uppercase;
   margin-right: 76px;
+  text-decoration: none;
 }
 
 .logo-primary {
-  color: #4d5ae5;
+  color: var(--logoFirst);
 }
 
 .nav__list {
   display: flex;
+  list-style: none;
 }
 
 .nav__list-item {
-  font-weight: 500;
   margin-right: 40px;
+}
+
+.nav__list-link {
+  font-weight: 500;
+  color: var(--headingsColor);
+  text-decoration: none;
+}
+
+.nav__list-link:hover {
+  color: var(--activeLink);
+  border-bottom: 4px solid var(--activeLink);
+  border-radius: 2px;
 }
 
 .address__list {
   display: flex;
   align-items: center;
   gap: 40px;
+  list-style: none;
 }
 
-.address__list-item {
+.address__list-link {
+  text-decoration: none;
   font-style: normal;
-  color: #434455;
+  color: var(--primaryColor);
+}
+
+.address__list-link:hover,
+.address__list-link:focus {
+  color: var(--activeLink);
 }
 
 .hero {
   padding: 188px 0;
-  background: #2e2f42;
+  background: var(--mainBackground);
 }
 
 .main-title {
@@ -100,7 +116,7 @@ button {
   font-weight: 700;
   font-size: 56px;
   line-height: 60px;
-  color: #ffffff;
+  color: var(--whiteText);
   margin-bottom: 48px;
 }
 
@@ -108,11 +124,16 @@ button {
   display: flex;
   margin: 0 auto;
   padding: 16px 32px;
-  background: #4d5ae5;
+  background: var(--mainBtnOrder);
   font-weight: 500;
-  color: #ffffff;
+  color: var(--whiteText);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
+}
+
+.main-btn:hover {
+  background: var(--activeLink);
 }
 
 .advantages {
@@ -123,6 +144,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  list-style: none;
 }
 
 .advantages__item {
@@ -131,12 +153,9 @@ button {
 
 .advantages__item-title {
   margin-bottom: 8px;
+  color: var(--headingsColor);
   font-weight: 500;
   font-size: 20px;
-}
-
-.advantages__item-text {
-  color: #434455;
 }
 
 .about {
@@ -144,17 +163,23 @@ button {
 }
 
 .about-title {
+  margin-bottom: 72px;
+  text-align: center;
+  color: var(--headingsColor);
   font-weight: 700;
   font-size: 36px;
   line-height: 40px;
-  text-align: center;
   text-transform: capitalize;
-  margin-bottom: 72px;
 }
 
 .about__products {
   display: flex;
   justify-content: space-between;
+  list-style: none;
+}
+
+.about__product {
+  border: 1px solid var(--border);
 }
 
 .team {
@@ -163,12 +188,13 @@ button {
 }
 
 .team-title {
+  margin-bottom: 72px;
+  text-align: center;
+  color: var(--headingsColor);
   font-weight: 700;
   font-size: 36px;
   line-height: 40px;
-  text-align: center;
   text-transform: capitalize;
-  margin-bottom: 72px;
 }
 
 .team__items {
@@ -181,7 +207,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #ffffff;
+  background: var(--background);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
@@ -193,34 +219,32 @@ button {
 }
 
 .team__item-name {
+  margin-bottom: 8px;
+  color: var(--headingsColor);
   font-weight: 500;
   font-size: 20px;
-  margin-bottom: 8px;
-}
-
-.team__item-title {
-  color: #434455;
 }
 
 .footer {
   padding: 100px 0;
-  background-color: #2e2f42;
+  background-color: var(--footerBackground);
 }
 
 .logo-footer {
+  color: var(--logoFooter);
   font-family: "Raleway";
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #f4f4fd;
+  text-decoration: none;
 }
 
 .footer-text {
   margin-top: 16px;
   max-width: 264px;
-  color: #f4f4fd;
+  color: var(--footerContent);
 }
 
 .portfolio {
@@ -232,24 +256,26 @@ button {
   align-items: center;
   justify-content: center;
   gap: 24px;
+  list-style: none;
 }
 
 .portfolio__sort-btn {
+  margin-bottom: 72px;
   padding: 12px 24px;
-  background: #f4f4fd;
-  border: 1px solid #e7e9fc;
+  color: var(--portfolioBtnText);
+  background: var(--portfolioButton);
+  border: 1px solid var(--border);
   border-radius: 4px;
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.04em;
-  color: #4d5ae5;
-  margin-bottom: 72px;
+  cursor: pointer;
 }
 
 .active {
-  color: #ffffff;
-  background: #404bbf;
+  color: var(--whiteText);
+  background: var(--portfolioButtonActive);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -260,10 +286,11 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 48px 24px;
+  list-style: none;
 }
 
 .portfolio__item {
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--border);
 }
 
 .portfolio__item-wrapper {
@@ -271,11 +298,8 @@ button {
 }
 
 .portfolio__item-title {
+  color: var(--headingsColor);
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 8px;
-}
-
-.portfolio__item-text {
-  color: #434455;
 }
