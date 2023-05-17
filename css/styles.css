@@ -85,7 +85,6 @@ body {
 
 .nav__list-link {
   font-weight: 500;
-  letter-spacing: 0.02em;
   color: var(--headingsColor);
 }
 
@@ -108,7 +107,6 @@ body {
 
 .address__list-link {
   text-decoration: none;
-  letter-spacing: 0.02em;
   color: var(--primaryColor);
 }
 
@@ -129,7 +127,6 @@ body {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  letter-spacing: 0.02em;
   color: var(--whiteText);
   margin-bottom: 48px;
 }
@@ -176,11 +173,6 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em;
-}
-
-.advantages__item-text {
-  letter-spacing: 0.02em;
 }
 
 .about {
@@ -218,7 +210,6 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  letter-spacing: 0.02em;
   text-transform: capitalize;
 }
 
@@ -249,7 +240,6 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em;
 }
 
 .footer {
@@ -334,10 +324,8 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em;
 }
 
 .portfolio__item-text {
-  letter-spacing: 0.02em;
   color: var(--primaryColor);
 }
